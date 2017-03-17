@@ -1,0 +1,35 @@
+{
+    "name": "tkotosz/behat-test-project-with-phantomjs",
+    "description": "Behat test project with phantomjs",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "silex/silex": "~2.0"
+    },
+    "require-dev": {
+        "behat/behat": "^3.0.0",
+        "bex/behat-screenshot": "^1.0",
+        "behat/mink-selenium2-driver": "^1.3",
+        "ciaranmcnulty/behat-stepthroughextension": "^1.0",
+        "jakoch/phantomjs-installer": "^2.1.1-p07"
+    },
+    "authors": [
+        {
+            "name": "Tibor Kotosz",
+            "email": "kotosy@gmail.com",
+            "homepage": "https://github.com/tkotosz",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "PhantomInstaller\\Installer::installPhantomJS"
+        ],
+        "post-update-cmd": [
+            "PhantomInstaller\\Installer::installPhantomJS"
+        ]
+    }
+}

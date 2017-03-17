@@ -1,0 +1,15 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'http://localhost:8080'
+      sessions:
+        default:
+          selenium2:
+            wd_host: http://localhost:4444/wd/hub
+            browser: phantomjs
+    Bex\Behat\ScreenshotExtension:
+      image_drivers:
+        local:
+          screenshot_directory: screenshots
+          clear_screenshot_directory: true
+    Cjm\Behat\StepThroughExtension: ~
